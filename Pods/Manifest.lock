@@ -17,6 +17,7 @@ PODS:
   - Base64 (1.1.2)
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.10)
+  - RNCryptor (3.0.1)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - Base64
   - MBProgressHUD
   - MJExtension
+  - RNCryptor
   - SDWebImage
   - SVPullToRefresh
 
@@ -35,6 +37,7 @@ SPEC CHECKSUMS:
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  RNCryptor: 761fc3ed94d1a0e409ba5b8e5dbef6a8f69352a7
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 

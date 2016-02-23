@@ -11,3 +11,5 @@ pod "MBProgressHUD"
 pod "SVPullToRefresh"
 
 pod "Base64"
+
+pod "RNCryptor"
