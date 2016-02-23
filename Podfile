@@ -9,3 +9,5 @@ pod "SDWebImage"
 pod "MBProgressHUD"
 
 pod "SVPullToRefresh"
+
+pod "Base64"
