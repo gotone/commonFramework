@@ -60,7 +60,7 @@
 }
 
 
-#pragma mark - backgroun task
+#pragma mark - background task
 - (void)backgroundTask{
     NSTimeInterval backgroundTimeRemaining = [[UIApplication sharedApplication] backgroundTimeRemaining];
     LCFLog("%f", backgroundTimeRemaining);
