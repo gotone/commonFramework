@@ -23,5 +23,9 @@
 
 @property (weak, nonatomic) id<AppDelegateProtocol> appDelegateDelegate;
 
+@property (unsafe_unretained, nonatomic) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
+
+@property (strong, nonatomic) NSTimer *appDelegateTimer;
+
 @end
 
