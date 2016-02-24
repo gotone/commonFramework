@@ -15,34 +15,32 @@
 
 @implementation AppDelegate
 
-@synthesize appDelegateDelegate;
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    if (appDelegateDelegate && [appDelegateDelegate respondsToSelector:@selector(appWillResignActive:)]) {
-        [appDelegateDelegate appWillResignActive:application];
+    if (_appDelegateDelegate && [_appDelegateDelegate respondsToSelector:@selector(appWillResignActive:)]) {
+        [_appDelegateDelegate appWillResignActive:application];
     }
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    if (appDelegateDelegate && [appDelegateDelegate respondsToSelector:@selector(appDidEnterBackground:)]) {
-        [appDelegateDelegate appDidEnterBackground:application];
+    if (_appDelegateDelegate && [_appDelegateDelegate respondsToSelector:@selector(appDidEnterBackground:)]) {
+        [_appDelegateDelegate appDidEnterBackground:application];
     }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    if (appDelegateDelegate && [appDelegateDelegate respondsToSelector:@selector(appWillEnterForground:)]) {
-        [appDelegateDelegate appWillEnterForground:application];
+    if (_appDelegateDelegate && [_appDelegateDelegate respondsToSelector:@selector(appWillEnterForground:)]) {
+        [_appDelegateDelegate appWillEnterForground:application];
     }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    if (appDelegateDelegate && [appDelegateDelegate respondsToSelector:@selector(appDidBecomeActive:)]) {
-        [appDelegateDelegate appDidBecomeActive:application];
+    if (_appDelegateDelegate && [_appDelegateDelegate respondsToSelector:@selector(appDidBecomeActive:)]) {
+        [_appDelegateDelegate appDidBecomeActive:application];
     }
 }
 
