@@ -59,6 +59,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+#pragma mark - backgroun task
 - (void)backgroundTask{
     NSTimeInterval backgroundTimeRemaining = [[UIApplication sharedApplication] backgroundTimeRemaining];
     LCFLog("%f", backgroundTimeRemaining);
