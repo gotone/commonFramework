@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AppDelegateProtocol <NSObject>
+
+@optional
+- (void)appWillResignActive:(UIApplication *)application;
+- (void)appDidBecomeActive:(UIApplication *)application;
+- (void)appDidEnterBackground:(UIApplication *)application;
+- (void)appWillEnterForground:(UIApplication *)application;
+@end
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (weak, nonatomic) id<AppDelegateProtocol> appDelegateDelegate;
 
 @end
 

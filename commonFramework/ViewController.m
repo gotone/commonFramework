@@ -11,14 +11,16 @@
 #import "NSString+extra.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) AppDelegate *delegate;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    //获取UIApplicationDelegate的代理
+    _delegate = [[UIApplication sharedApplication] delegate];
+    _delegate.appDelegateDelegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -34,6 +36,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - AppDelegate Delegate
+- (void)appWillResignActive:(UIApplication *)application{
+    LCFLog(@"appWillResignActive");
+}
+- (void)appDidBecomeActive:(UIApplication *)application{
+    LCFLog(@"appDidBecomeActive");
+}
+- (void)appWillEnterForground:(UIApplication *)application{
+    LCFLog(@"appWillEnterForground");
+}
+- (void)appDidEnterBackground:(UIApplication *)application{
+    LCFLog(@"appDidEnterBackground");
 }
 
 @end
