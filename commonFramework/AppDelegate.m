@@ -36,8 +36,20 @@
     player2.rating = 88;
     [_players addObject:player2];
     
+    Player *player3 = [[Player alloc] init];
+    player3.name = @"bill3";
+    player3.game = @"223344";
+    player3.rating = 88;
+    [_players addObject:player3];
+    
+    Player *player4 = [[Player alloc] init];
+    player4.name = @"bill4";
+    player4.game = @"223344";
+    player4.rating = 88;
+    [_players addObject:player4];
+    
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    UINavigationController *navController = (tabBarController.viewControllers)[1];//UITableViewController
+    UINavigationController *navController = (tabBarController.viewControllers)[0];//UITableViewController
     PlayerTableViewController *playerController = (navController.viewControllers)[0];
     playerController.mutableArrayPlayers = _players;
     

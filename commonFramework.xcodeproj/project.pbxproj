@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		2C11538C1C7EDD98008CB62F /* PlayerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11538B1C7EDD98008CB62F /* PlayerTableViewController.m */; };
 		2C1153901C7EDEDB008CB62F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11538F1C7EDEDB008CB62F /* Player.m */; };
+		2C1153931C7EF02A008CB62F /* SecondTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1153921C7EF02A008CB62F /* SecondTabViewController.m */; };
+		2C1153961C7EFE66008CB62F /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1153951C7EFE66008CB62F /* TableViewCell.m */; };
+		2C11539B1C7F04F0008CB62F /* images3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C1153981C7F04F0008CB62F /* images3.jpeg */; };
+		2C11539C1C7F04F0008CB62F /* images2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C1153991C7F04F0008CB62F /* images2.jpeg */; };
+		2C11539D1C7F04F0008CB62F /* images1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C11539A1C7F04F0008CB62F /* images1.jpeg */; };
+		2C1153A01C7F1E4A008CB62F /* logo1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C11539E1C7F1E4A008CB62F /* logo1.jpeg */; };
+		2C1153A11C7F1E4A008CB62F /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C11539F1C7F1E4A008CB62F /* logo2.png */; };
 		2C7426DB1C7C16180038FDDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7426DA1C7C16180038FDDE /* main.m */; };
 		2C7426DE1C7C16180038FDDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7426DD1C7C16180038FDDE /* AppDelegate.m */; };
 		2C7426E11C7C16180038FDDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7426E01C7C16180038FDDE /* ViewController.m */; };
@@ -44,6 +51,15 @@
 		2C11538B1C7EDD98008CB62F /* PlayerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewController.m; sourceTree = "<group>"; };
 		2C11538E1C7EDEDB008CB62F /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		2C11538F1C7EDEDB008CB62F /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		2C1153911C7EF02A008CB62F /* SecondTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTabViewController.h; sourceTree = "<group>"; };
+		2C1153921C7EF02A008CB62F /* SecondTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTabViewController.m; sourceTree = "<group>"; };
+		2C1153941C7EFE66008CB62F /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		2C1153951C7EFE66008CB62F /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		2C1153981C7F04F0008CB62F /* images3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images3.jpeg; sourceTree = "<group>"; };
+		2C1153991C7F04F0008CB62F /* images2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images2.jpeg; sourceTree = "<group>"; };
+		2C11539A1C7F04F0008CB62F /* images1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images1.jpeg; sourceTree = "<group>"; };
+		2C11539E1C7F1E4A008CB62F /* logo1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo1.jpeg; sourceTree = "<group>"; };
+		2C11539F1C7F1E4A008CB62F /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		2C7426D61C7C16180038FDDE /* commonFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commonFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7426DA1C7C16180038FDDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C7426DC1C7C16180038FDDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -98,6 +114,8 @@
 		2C1153871C7EDCB6008CB62F /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2C1153911C7EF02A008CB62F /* SecondTabViewController.h */,
+				2C1153921C7EF02A008CB62F /* SecondTabViewController.m */,
 			);
 			path = TabBarViewController;
 			sourceTree = "<group>";
@@ -107,6 +125,8 @@
 			children = (
 				2C11538A1C7EDD98008CB62F /* PlayerTableViewController.h */,
 				2C11538B1C7EDD98008CB62F /* PlayerTableViewController.m */,
+				2C1153941C7EFE66008CB62F /* TableViewCell.h */,
+				2C1153951C7EFE66008CB62F /* TableViewCell.m */,
 			);
 			path = TableViewController;
 			sourceTree = "<group>";
@@ -118,6 +138,19 @@
 				2C11538F1C7EDEDB008CB62F /* Player.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2C1153971C7F045A008CB62F /* image */ = {
+			isa = PBXGroup;
+			children = (
+				2C11539E1C7F1E4A008CB62F /* logo1.jpeg */,
+				2C11539F1C7F1E4A008CB62F /* logo2.png */,
+				2C1153981C7F04F0008CB62F /* images3.jpeg */,
+				2C1153991C7F04F0008CB62F /* images2.jpeg */,
+				2C11539A1C7F04F0008CB62F /* images1.jpeg */,
+			);
+			name = image;
+			path = resources/image;
 			sourceTree = "<group>";
 		};
 		2C7426CD1C7C16170038FDDE = {
@@ -158,6 +191,7 @@
 		2C7426D91C7C16180038FDDE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C1153971C7F045A008CB62F /* image */,
 				2C7426EA1C7C16180038FDDE /* Info.plist */,
 				2C7426DA1C7C16180038FDDE /* main.m */,
 			);
@@ -347,8 +381,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7426E91C7C16180038FDDE /* LaunchScreen.storyboard in Resources */,
+				2C1153A01C7F1E4A008CB62F /* logo1.jpeg in Resources */,
+				2C11539C1C7F04F0008CB62F /* images2.jpeg in Resources */,
+				2C11539B1C7F04F0008CB62F /* images3.jpeg in Resources */,
 				2C7426E61C7C16180038FDDE /* Assets.xcassets in Resources */,
 				2C7426E41C7C16180038FDDE /* Main.storyboard in Resources */,
+				2C11539D1C7F04F0008CB62F /* images1.jpeg in Resources */,
+				2C1153A11C7F1E4A008CB62F /* logo2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,8 +464,10 @@
 				2C7426DE1C7C16180038FDDE /* AppDelegate.m in Sources */,
 				2C7427161C7C1A850038FDDE /* LCFDefines.m in Sources */,
 				2C7426DB1C7C16180038FDDE /* main.m in Sources */,
+				2C1153961C7EFE66008CB62F /* TableViewCell.m in Sources */,
 				2C11538C1C7EDD98008CB62F /* PlayerTableViewController.m in Sources */,
 				2C1153901C7EDEDB008CB62F /* Player.m in Sources */,
+				2C1153931C7EF02A008CB62F /* SecondTabViewController.m in Sources */,
 				2C74271C1C7C730E0038FDDE /* NSString+extra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
