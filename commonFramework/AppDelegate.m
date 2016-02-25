@@ -8,15 +8,39 @@
 
 #import "AppDelegate.h"
 #import "LCFDefines.h"
+#import "Player.h"
+#import "PlayerTableViewController.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) NSMutableArray *players;
 
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    //添加数据到tableViewController
+    _players = [[NSMutableArray alloc] initWithCapacity:10];
+    
+    Player *player1 = [[Player alloc] init];
+    player1.name = @"bill";
+    player1.game = @"112233";
+    player1.rating = 99;
+    [_players addObject:player1];
+    
+    Player *player2 = [[Player alloc] init];
+    player2.name = @"bill2";
+    player2.game = @"223344";
+    player2.rating = 88;
+    [_players addObject:player2];
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *navController = (tabBarController.viewControllers)[1];//UITableViewController
+    PlayerTableViewController *playerController = (navController.viewControllers)[0];
+    playerController.mutableArrayPlayers = _players;
+    
     return YES;
 }
 

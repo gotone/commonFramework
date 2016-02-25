@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C11538C1C7EDD98008CB62F /* PlayerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11538B1C7EDD98008CB62F /* PlayerTableViewController.m */; };
+		2C1153901C7EDEDB008CB62F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11538F1C7EDEDB008CB62F /* Player.m */; };
 		2C7426DB1C7C16180038FDDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7426DA1C7C16180038FDDE /* main.m */; };
 		2C7426DE1C7C16180038FDDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7426DD1C7C16180038FDDE /* AppDelegate.m */; };
 		2C7426E11C7C16180038FDDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7426E01C7C16180038FDDE /* ViewController.m */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C11538A1C7EDD98008CB62F /* PlayerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewController.h; sourceTree = "<group>"; };
+		2C11538B1C7EDD98008CB62F /* PlayerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewController.m; sourceTree = "<group>"; };
+		2C11538E1C7EDEDB008CB62F /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		2C11538F1C7EDEDB008CB62F /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		2C7426D61C7C16180038FDDE /* commonFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commonFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7426DA1C7C16180038FDDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C7426DC1C7C16180038FDDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +95,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C1153871C7EDCB6008CB62F /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		2C1153881C7EDD26008CB62F /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C11538A1C7EDD98008CB62F /* PlayerTableViewController.h */,
+				2C11538B1C7EDD98008CB62F /* PlayerTableViewController.m */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		2C11538D1C7EDEBF008CB62F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C11538E1C7EDEDB008CB62F /* Player.h */,
+				2C11538F1C7EDEDB008CB62F /* Player.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2C7426CD1C7C16170038FDDE = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +145,7 @@
 		2C7426D81C7C16180038FDDE /* commonFramework */ = {
 			isa = PBXGroup;
 			children = (
+				2C11538D1C7EDEBF008CB62F /* Model */,
 				2C7427131C7C1A6A0038FDDE /* Common */,
 				2C74270D1C7C183D0038FDDE /* ViewController */,
 				2C74270E1C7C183D0038FDDE /* Utils */,
@@ -167,6 +199,8 @@
 		2C74270D1C7C183D0038FDDE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2C1153881C7EDD26008CB62F /* TableViewController */,
+				2C1153871C7EDCB6008CB62F /* TabBarViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -391,6 +425,8 @@
 				2C7426DE1C7C16180038FDDE /* AppDelegate.m in Sources */,
 				2C7427161C7C1A850038FDDE /* LCFDefines.m in Sources */,
 				2C7426DB1C7C16180038FDDE /* main.m in Sources */,
+				2C11538C1C7EDD98008CB62F /* PlayerTableViewController.m in Sources */,
+				2C1153901C7EDEDB008CB62F /* Player.m in Sources */,
 				2C74271C1C7C730E0038FDDE /* NSString+extra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
