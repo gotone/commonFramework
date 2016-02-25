@@ -7,6 +7,7 @@
 //
 
 #import "SecondTabViewController.h"
+#import "LCFDefines.h"
 
 @interface SecondTabViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    LCFLog(@"view did load:%@", NSStringFromClass(self.class));
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +34,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    LCFLog(@"view will appear:%@", NSStringFromClass(self.class));
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    LCFLog(@"view did appear:%@", NSStringFromClass(self.class));
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    LCFLog(@"view will disappear:%@", NSStringFromClass(self.class));
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    LCFLog(@"view did disappear:%@", NSStringFromClass(self.class));
+}
 
 @end

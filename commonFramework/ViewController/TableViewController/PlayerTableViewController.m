@@ -8,10 +8,14 @@
 
 #import "PlayerTableViewController.h"
 #import "Player.h"
+#import <UIKit/UIColor.h>
 
 #define tableViewNameTag        1001
 #define tableViewGameTag        1002
 #define tableViewPicTag         1003
+
+#define tableViewHeaderHeight   20
+#define tableViewFooterHeight   20
 
 @interface PlayerTableViewController()
 
@@ -27,7 +31,7 @@
     return [_mutableArrayPlayers count];
 }
 
-- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIndetifier = @"tableViewCellPlayers1001";
     //storyboard已经初始化好，自己不用再初始化
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndetifier];
@@ -45,12 +49,24 @@
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     int expectedHeight = [self getExpectedCellHeight:tableView];
     if (expectedHeight > 0) {
         return expectedHeight;
     }
     return 60;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return tableViewHeaderHeight;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return tableViewFooterHeight;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"TEST header";
 }
 
 - (int)getExpectedCellHeight:(UITableView *)tableView{
