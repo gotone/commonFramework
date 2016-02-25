@@ -8,6 +8,8 @@
 
 #import "PlayerTableViewController.h"
 #import "Player.h"
+#import "MBProgressHUD.h"
+
 #import <UIKit/UIColor.h>
 
 #define tableViewNameTag        1001
@@ -18,10 +20,31 @@
 #define tableViewFooterHeight   20
 
 @interface PlayerTableViewController()
-
+@property(strong, nonatomic)NSTimer *progressTimer;
 @end
 
 @implementation PlayerTableViewController
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(hideProgressHUD) userInfo:nil repeats:NO];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self hideProgressHUD];
+    [_progressTimer invalidate];
+    _progressTimer = nil;
+}
+
+- (void)hideProgressHUD{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
