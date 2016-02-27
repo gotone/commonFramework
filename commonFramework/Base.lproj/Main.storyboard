@@ -14,11 +14,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="tableViewCellPlayers1001" rowHeight="60" id="F28-EZ-KSv" customClass="TableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellPlayers1001" rowHeight="60" id="F28-EZ-KSv" customClass="TableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F28-EZ-KSv" id="as0-TY-ESH">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCI-Lq-IVP">
@@ -49,7 +49,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vP7-JP-yB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-925" y="-2029"/>
+            <point key="canvasLocation" x="-931" y="-2029"/>
         </scene>
         <!--Second Tab-->
         <scene sceneID="hBN-aj-Q5B">
@@ -77,12 +77,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oo-mo-erz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1799" y="-1188"/>
+            <point key="canvasLocation" x="-1799" y="-1358"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="zr4-CY-fLr">
             <objects>
-                <tabBarController id="Ggo-HH-f2J" sceneMemberID="viewController">
+                <tabBarController id="Ggo-HH-f2J" customClass="LCFTabBarViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9WR-13-Vxd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -90,7 +90,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="WdC-qI-HVR" kind="relationship" relationship="viewControllers" id="uQA-gy-IaN"/>
-                        <segue destination="iOz-5x-fNh" kind="relationship" relationship="viewControllers" id="QPz-vU-A64"/>
+                        <segue destination="iOz-5x-fNh" kind="relationship" relationship="viewControllers" id="27N-Kn-co5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3I-Ge-DZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,7 +100,7 @@
         <!--First Tab-->
         <scene sceneID="o5P-TO-VzS">
             <objects>
-                <navigationController title="First Tab" automaticallyAdjustsScrollViewInsets="NO" id="WdC-qI-HVR" sceneMemberID="viewController">
+                <navigationController title="First Tab" automaticallyAdjustsScrollViewInsets="NO" id="WdC-qI-HVR" customClass="LCFNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="First Tab" image="logo2.png" id="6c5-dq-Rhi">
                         <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     </tabBarItem>
