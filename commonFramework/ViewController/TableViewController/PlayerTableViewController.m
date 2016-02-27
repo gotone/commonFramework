@@ -58,7 +58,8 @@
 - (void)showProgressHUD{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, DISPATCH_QUEUE_FLAG_0), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            __weak typeof(self) weakSelf = self;
+            [MBProgressHUD showHUDAddedTo:weakSelf.view animated:YES];
         });
     });
 }
@@ -66,7 +67,8 @@
 - (void)hideProgressHUD{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, DISPATCH_QUEUE_FLAG_0), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            __weak typeof(self) weakSelf = self;
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
         });
     });
 }
