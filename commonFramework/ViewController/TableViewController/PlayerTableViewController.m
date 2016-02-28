@@ -10,6 +10,7 @@
 #import "Player.h"
 #import "MBProgressHUD.h"
 #import "LCFDefines.h"
+#import "SVPullToRefresh.h"
 
 #import <UIKit/UIColor.h>
 
@@ -37,7 +38,8 @@
 #define DISPATCH_QUEUE_FLAG_0   0
 
 @interface PlayerTableViewController()
-@property(strong, nonatomic)NSTimer *progressTimer;
+@property(strong, nonatomic) NSTimer *progressTimer;
+@property(strong, nonatomic) NSTimer *refreshTimer;
 @end
 
 @implementation PlayerTableViewController
@@ -46,6 +48,12 @@
     [super viewDidAppear:animated];
     [self showProgressHUD];
     _progressTimer = [NSTimer scheduledTimerWithTimeInterval:scheduleTimeInterval5 target:self selector:@selector(hideProgressHUD) userInfo:nil repeats:NO];
+    __weak typeof(self) weakSelf = self;
+
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [weakSelf.tableView beginUpdates];
+        weakSelf.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:weakSelf selector:@selector(hideRefreshBar) userInfo:nil repeats:NO];
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -53,6 +61,9 @@
     [self hideProgressHUD];
     [_progressTimer invalidate];
     _progressTimer = nil;
+    
+    [_refreshTimer invalidate];
+    _refreshTimer = nil;
 }
 
 - (void)showProgressHUD{
@@ -263,6 +274,16 @@
         //data operation
         [weakSelf.mutableArrayPlayers removeLastObject];
         [weakSelf.tableView reloadData];
+    });
+}
+
+- (void)hideRefreshBar{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            __weak typeof(self) weakSelf = self;
+            [weakSelf.tableView endUpdates];
+            [weakSelf.tableView.pullToRefreshView stopAnimating];
+        });
     });
 }
 
