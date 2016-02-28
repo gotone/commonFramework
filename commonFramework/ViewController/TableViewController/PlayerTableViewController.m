@@ -135,7 +135,7 @@
     UIImageView *titleImage = (UIImageView *)[cell viewWithTag:tableViewPicTag];
     
     switch (indexPath.section) {
-        case 0:{
+        case tableViewSection0:{
             if (indexPath.row == 2) {
                 cell.accessoryType = UITableViewCellAccessoryDetailButton;
             }else{
@@ -145,13 +145,13 @@
             game.text = player.game;
         }
             break;
-        case 1:{
+        case tableViewSection1:{
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             name.text = [[NSString alloc] initWithFormat:@"%@+%@", player.name, @"2"];
             game.text = [[NSString alloc] initWithFormat:@"%@+%@", player.game, @"2"];
         }
             break;
-        case 2:{
+        case tableViewSection2:{
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
             name.text = [[NSString alloc] initWithFormat:@"%@+%@", player.name, @"3"];
             game.text = [[NSString alloc] initWithFormat:@"%@+%@", player.game, @"3"];
