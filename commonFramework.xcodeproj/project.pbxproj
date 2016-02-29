@@ -28,6 +28,7 @@
 		2C7427161C7C1A850038FDDE /* LCFDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7427151C7C1A850038FDDE /* LCFDefines.m */; };
 		2C74271C1C7C730E0038FDDE /* NSString+extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74271B1C7C730E0038FDDE /* NSString+extra.m */; };
 		2CC001B11C7F27B700824C4C /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC001B01C7F27B700824C4C /* logo1.png */; };
+		2CE290751C84A158000A3532 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE290741C84A158000A3532 /* PushViewController.m */; };
 		BAD1CAFE208F252DF5296573 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55747911C41FBF16B91ADBC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		2C74271A1C7C730E0038FDDE /* NSString+extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+extra.h"; sourceTree = "<group>"; };
 		2C74271B1C7C730E0038FDDE /* NSString+extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+extra.m"; sourceTree = "<group>"; };
 		2CC001B01C7F27B700824C4C /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
+		2CE290731C84A158000A3532 /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		2CE290741C84A158000A3532 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		55747911C41FBF16B91ADBC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6159D3B1C4EA1B65446492CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FB67E09F443DB793782699F5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				2C1A707A1C8150F1006B764B /* LCFTabBarViewController.m */,
 				2C1A707C1C81554B006B764B /* LCFNavigationController.h */,
 				2C1A707D1C81554B006B764B /* LCFNavigationController.m */,
+				2CE290731C84A158000A3532 /* PushViewController.h */,
+				2CE290741C84A158000A3532 /* PushViewController.m */,
 			);
 			path = TabBarViewController;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 			files = (
 				2C7426E11C7C16180038FDDE /* ViewController.m in Sources */,
 				2C7426DE1C7C16180038FDDE /* AppDelegate.m in Sources */,
+				2CE290751C84A158000A3532 /* PushViewController.m in Sources */,
 				2C1A707B1C8150F1006B764B /* LCFTabBarViewController.m in Sources */,
 				2C7427161C7C1A850038FDDE /* LCFDefines.m in Sources */,
 				2C7426DB1C7C16180038FDDE /* main.m in Sources */,

@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F28-EZ-KSv" id="as0-TY-ESH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCI-Lq-IVP">
@@ -68,6 +68,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efi-JR-VdQ">
+                                <rect key="frame" x="20" y="368" width="104" height="30"/>
+                                <state key="normal" title="Next Controller"/>
+                                <connections>
+                                    <segue destination="Tdj-nl-dhD" kind="presentation" id="pq0-0v-Pfh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -78,6 +85,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oo-mo-erz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1799" y="-1358"/>
+        </scene>
+        <!--Push View Controller-->
+        <scene sceneID="0Tz-9k-5M2">
+            <objects>
+                <viewController id="Tdj-nl-dhD" customClass="PushViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BTS-Ld-ufY"/>
+                        <viewControllerLayoutGuide type="bottom" id="BvK-KY-a3W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PcE-EN-WAM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCf-A0-2Bq">
+                                <rect key="frame" x="20" y="20" width="63" height="30"/>
+                                <state key="normal" title="dismiss"/>
+                                <connections>
+                                    <action selector="onDismissSelf:" destination="Tdj-nl-dhD" eventType="touchUpInside" id="s65-ie-Xs6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="DismissSelf" destination="xCf-A0-2Bq" id="Hp9-md-9Wz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9d-Fy-Uo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-931" y="-1358"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="zr4-CY-fLr">
