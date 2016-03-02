@@ -46,7 +46,7 @@
     LCFLog(@"view did appear:%@", NSStringFromClass(self.class));
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(hideProgressHUD) userInfo:nil repeats:NO];
+    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(hideProgressHUD) userInfo:nil repeats:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -60,6 +60,9 @@
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     LCFLog(@"view did disappear:%@", NSStringFromClass(self.class));
+}
+- (IBAction)onToPushController:(id)sender {
+    [self performSegueWithIdentifier:@"toThirdTab" sender:self];
 }
 
 - (void)hideProgressHUD{

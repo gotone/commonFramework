@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondTabViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *ToNextController;
 
 @end

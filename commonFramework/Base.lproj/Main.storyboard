@@ -54,7 +54,7 @@
         <!--Second Tab-->
         <scene sceneID="hBN-aj-Q5B">
             <objects>
-                <viewController title="Second Tab" id="iOz-5x-fNh" customClass="SecondTabViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondTab" title="Second Tab" id="iOz-5x-fNh" customClass="SecondTabViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ToM-N6-W3s"/>
                         <viewControllerLayoutGuide type="bottom" id="jEP-2B-aMe"/>
@@ -72,7 +72,7 @@
                                 <rect key="frame" x="20" y="368" width="104" height="30"/>
                                 <state key="normal" title="Next Controller"/>
                                 <connections>
-                                    <segue destination="Tdj-nl-dhD" kind="presentation" id="pq0-0v-Pfh"/>
+                                    <action selector="onToPushController:" destination="iOz-5x-fNh" eventType="touchUpInside" id="nzM-2Q-kWK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,6 +81,13 @@
                     <tabBarItem key="tabBarItem" title="Second" image="logo1.png" id="UZR-6C-IRo">
                         <inset key="imageInsets" minX="2" minY="3" maxX="2" maxY="3"/>
                     </tabBarItem>
+                    <keyCommands>
+                        <keyCommand/>
+                    </keyCommands>
+                    <connections>
+                        <outlet property="ToNextController" destination="efi-JR-VdQ" id="tMr-6r-4eb"/>
+                        <segue destination="Tdj-nl-dhD" kind="presentation" identifier="toThirdTab" id="xH8-AL-crf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oo-mo-erz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
